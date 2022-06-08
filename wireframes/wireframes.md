@@ -1,5 +1,19 @@
 # Wireframes
 
-<!-- TODO: Add wireframe -->
+DESKTOP
+![img](./Wireframe%20Desktop.png)
 
-![img](./wireframe.jpg)
+DESKTOP DASHBOARD
+![img](./Wireframe%20Desktop%20-%20Dashboard.png)
+
+MEDIUM
+![img](./Wireframe%20Medium.png)
+
+MEDIUM DASHBOARD
+![img](./Wireframe%20Medium%20-%20Dashboard.png)
+
+MOBILE
+![img](./Wireframe%20Mobile.png)
+
+MOBILE DASHBOARD
+![img](./Wireframe%20Mobile%20-%20Dashboard.png)
