@@ -1,39 +1,39 @@
 # Wireframes
 
-DESKTOP
+DESKTOP  
 ![img](./Wireframe%20Desktop.png)
 
-DESKTOP DASHBOARD
+DESKTOP DASHBOARD  
 ![img](./Wireframe%20Desktop%20-%20Dashboard.png)
 
-MEDIUM
+MEDIUM  
 ![img](./Wireframe%20Medium.png)
 
-MEDIUM DASHBOARD
+MEDIUM DASHBOARD  
 ![img](./Wireframe%20Medium%20-%20Dashboard.png)
 
-MOBILE
+MOBILE  
 ![img](./Wireframe%20Mobile.png)
 
-MOBILE DASHBOARD
+MOBILE DASHBOARD  
 ![img](./Wireframe%20Mobile%20-%20Dashboard.png)
 
 # High Fidelity
 
-DESKTOP
+DESKTOP  
 ![img](./High-fidelity%20Desktop.png)
 
-DESKTOP DASHBOARD
+DESKTOP DASHBOARD  
 ![img](./High-fidelity%20Desktop%20-%20Dashboard.png)
 
-MEDIUM
+MEDIUM  
 ![img](./High-fidelity%20Medium.png)
 
-MEDIUM DASHBOARD
+MEDIUM DASHBOARD  
 ![img](./High-fidelity%20Medium%20-%20Dashboard.png)
 
-MOBILE
+MOBILE  
 ![img](./High-fidelity%20Mobile.png)
 
-MOBILE DASHBOARD
+MOBILE DASHBOARD  
 ![img](./High-fidelity%20Mobile%20-%20Dashboard.png)
