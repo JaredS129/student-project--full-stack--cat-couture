@@ -41,12 +41,16 @@ paths:
                       $ref: "#/components/schemas/Product"
                   currentPage:
                     type: integer
+                    example: 1
                   totalPages:
                     type: integer
+                    example: 10
                   itemsPerPage:
                     type: integer
+                    example: 10
                   totalItems:
                     type: integer
+                    example: 100
                 required:
                   - products
                   - currentPage
@@ -160,11 +164,11 @@ components:
               categoryName:
                 type: string
               totalProducts:
-                type: number
+                type: integer
                 minimum: 0
                 example: 5
               discountedProducts:
-                type: number
+                type: integer
                 minimum: 0
                 example: 2
             required:
@@ -184,7 +188,7 @@ components:
               - "percentage off"
               - "fixed amount off"
           totalProducts:
-            type: number
+            type: integer
             minimum: 0
             example: 95
         required:

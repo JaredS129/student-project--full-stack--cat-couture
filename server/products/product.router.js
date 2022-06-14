@@ -14,11 +14,29 @@ router.get(
   queryParamValidationMiddleware(queryParamsSchema),
   async (req, res, next) => {
     try {
-      const products = await productRepository.getProducts();
+      const { limit, page } = req.query;
+
+      const safeLimit = limit ? parseInt(limit) : 10;
+      const safeOffset = page ? parseInt(page) * safeLimit - safeLimit : 0;
+
+      const allProducts = await productRepository.getAllProducts();
+
+      const products = await productRepository.getProducts(
+        safeLimit,
+        safeOffset
+      );
+
+      const currentPage = page ? parseInt(page) : 1;
 
       const responseResults = {
         products,
+        currentPage: currentPage,
+        itemsPerPage: safeLimit,
+        totalItems: allProducts.length,
+        totalPages: Math.ceil(allProducts.length / safeLimit),
       };
+
+      console.log(responseResults.products);
 
       return res.json(responseResults);
     } catch (err) {
