@@ -1,5 +1,8 @@
 const express = require("express");
-const { checkJwt, checkScopes } = require("../middleware/authorizationMiddleware");
+const {
+  checkJwt,
+  checkScopes,
+} = require("../middleware/authorizationMiddleware");
 const router = express.Router();
 const reportRepository = require("./report.repository");
 
