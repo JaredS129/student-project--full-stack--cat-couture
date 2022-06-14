@@ -26,19 +26,17 @@ router.get(
         safeOffset
       );
 
+      const currentPage = page ? parseInt(page) : 1;
+
       const responseResults = {
         products,
-        currentPage: parseInt(page),
+        currentPage: currentPage,
         itemsPerPage: safeLimit,
         totalItems: allProducts.length,
         totalPages: Math.ceil(allProducts.length / safeLimit),
       };
 
       console.log(responseResults.products);
-
-      if (products.length === 0) {
-        return res.status(404).json({ message: "page not found" });
-      }
 
       return res.json(responseResults);
     } catch (err) {
