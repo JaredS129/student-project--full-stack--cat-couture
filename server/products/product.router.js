@@ -17,7 +17,7 @@ router.get(
       const { limit, page } = req.query;
 
       const safeLimit = limit ? parseInt(limit) : 10;
-      const safeOffset = page ? parseInt(page) * 10 - 10 : 0;
+      const safeOffset = page ? parseInt(page) * safeLimit - safeLimit : 0;
 
       const allProducts = await productRepository.getAllProducts();
 
@@ -37,7 +37,6 @@ router.get(
       console.log(responseResults.products);
 
       if (products.length === 0) {
-        console.log("hi");
         return res.status(404).json({ message: "page not found" });
       }
 
