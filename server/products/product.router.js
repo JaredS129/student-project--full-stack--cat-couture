@@ -19,7 +19,7 @@ router.get(
       const safeLimit = limit ? parseInt(limit) : 10;
       const safeOffset = page ? parseInt(page) * safeLimit - safeLimit : 0;
 
-      const allProducts = await productRepository.getTotalProducts();
+      const totalProducts = await productRepository.getTotalProducts();
 
       const products = await productRepository.getProducts(
         safeLimit,
@@ -32,8 +32,8 @@ router.get(
         products,
         currentPage: currentPage,
         itemsPerPage: safeLimit,
-        totalItems: parseInt(allProducts[0].count),
-        totalPages: Math.ceil(allProducts.length / safeLimit),
+        totalItems: parseInt(totalProducts[0].count),
+        totalPages: Math.ceil(totalProducts.length / safeLimit),
       };
 
       console.log(responseResults.products);
