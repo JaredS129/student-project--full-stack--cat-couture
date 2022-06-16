@@ -23,8 +23,9 @@ const StyledPaginationControls = styled.div`
 const PaginationControls = ({
   onPrev,
   onNext,
-  currentPage = null,
-  totalPages = null,
+  limit,
+  page,
+  totalPages,
 }) => {
   return (
     <StyledPaginationContainer>
@@ -35,7 +36,7 @@ const PaginationControls = ({
           </button>
         </div>
         <span>
-          Page {currentPage} of {totalPages}
+          Page {page} of {totalPages}
         </span>
         <div>
           <button aria-label="Next page" onClick={onNext}>
