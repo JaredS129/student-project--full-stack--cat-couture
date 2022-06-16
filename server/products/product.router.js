@@ -33,7 +33,7 @@ router.get(
         currentPage: currentPage,
         itemsPerPage: safeLimit,
         totalItems: parseInt(totalProducts[0].count),
-        totalPages: Math.ceil(totalProducts.length / safeLimit),
+        totalPages: Math.ceil(totalProducts[0].count / safeLimit),
       };
 
       console.log(responseResults.products);
