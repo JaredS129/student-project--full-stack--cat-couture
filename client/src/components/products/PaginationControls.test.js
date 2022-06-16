@@ -9,7 +9,7 @@ describe("PaginationControls", () => {
       <PaginationControls
         onNext={() => {}}
         onPrev={onPrev}
-        currentPage={1}
+        page={1}
         totalPages={5}
       />
     );
@@ -21,11 +21,57 @@ describe("PaginationControls", () => {
     expect(onPrev).not.toHaveBeenCalled();
   });
 
-  test.todo(
-    "WHEN the user is on the second page of the main product page, THEN the previous/back button of the pagination control will be enabled."
-  );
+  test("WHEN the user is on the second page of the main product page, THEN the previous/back button of the pagination control will be enabled.", () => {
+    const onPrev = jest.fn();
+    render(
+      <PaginationControls
+        onNext={() => {}}
+        onPrev={onPrev}
+        page={2}
+        totalPages={5}
+      />
+    );
+    const previousButton = screen.getByRole("button", {
+      name: "Previous page",
+    });
+    expect(previousButton).toBeEnabled();
+    userEvent.click(previousButton);
+    expect(onPrev).toHaveBeenCalled();
+  });
 
-  test.todo(
-    "WHEN the user is on the last page of the main product page, THEN next button of the pagination control will be disabled."
-  );
+  test("WHEN the user is on the last page of the main product page, THEN next button of the pagination control will be disabled.", () => {
+    const onNext = jest.fn();
+    render(
+      <PaginationControls
+        onNext={onNext}
+        onPrev={() => {}}
+        page={5}
+        totalPages={5}
+      />
+    );
+    const nextButton = screen.getByRole("button", {
+      name: "Next page",
+    });
+    expect(nextButton).toBeDisabled();
+    userEvent.click(nextButton);
+    expect(onNext).not.toHaveBeenCalled();
+  });
+
+  test("WHEN the user is on the second to last page of the main product page, THEN next button of the pagination control will be enabled.", () => {
+    const onNext = jest.fn();
+    render(
+      <PaginationControls
+        onNext={onNext}
+        onPrev={() => {}}
+        page={4}
+        totalPages={5}
+      />
+    );
+    const nextButton = screen.getByRole("button", {
+      name: "Next page",
+    });
+    expect(nextButton).toBeEnabled();
+    userEvent.click(nextButton);
+    expect(onNext).toHaveBeenCalled();
+  });
 });
