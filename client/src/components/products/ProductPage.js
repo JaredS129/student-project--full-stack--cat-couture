@@ -64,7 +64,6 @@ const ProductPage = () => {
       <PaginationControls
         onPrev={onPrev}
         onNext={onNext}
-        limit={limit}
         page={page}
         totalPages={totalPages}
       />
@@ -74,7 +73,6 @@ const ProductPage = () => {
       <PaginationControls
         onPrev={onPrev}
         onNext={onNext}
-        limit={limit}
         page={page}
         totalPages={totalPages}
       />

@@ -20,18 +20,16 @@ const StyledPaginationControls = styled.div`
   align-items: center;
 `;
 
-const PaginationControls = ({
-  onPrev,
-  onNext,
-  limit,
-  page,
-  totalPages,
-}) => {
+const PaginationControls = ({ onPrev, onNext, page, totalPages }) => {
   return (
     <StyledPaginationContainer>
       <StyledPaginationControls>
         <div>
-          <button aria-label="Previous page" onClick={onPrev}>
+          <button
+            disabled={page > 1 ? false : true}
+            aria-label="Previous page"
+            onClick={onPrev}
+          >
             <FontAwesomeIcon icon={faChevronLeft} size="2x" />
           </button>
         </div>
@@ -39,7 +37,11 @@ const PaginationControls = ({
           Page {page} of {totalPages}
         </span>
         <div>
-          <button aria-label="Next page" onClick={onNext}>
+          <button
+            disabled={page < totalPages ? false : true}
+            aria-label="Next page"
+            onClick={onNext}
+          >
             <FontAwesomeIcon icon={faChevronRight} size="2x" />
           </button>
         </div>
