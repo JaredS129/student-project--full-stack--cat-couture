@@ -15,6 +15,11 @@ const StyledNav = styled.nav`
 
   .menu {
     display: flex;
+    height: 7rem;
+  }
+
+  .logo {
+    margin: 1.2rem;
   }
 
   .right-links {
@@ -62,7 +67,7 @@ const Header = () => {
       <header>
         <StyledNav className="page-padding">
           <div className="menu">
-            <img src="./img/menu_black_24dp.svg" alt="menu" />
+            <img className="logo" src="./img/CCLogo.jpg" alt="menu" />
           </div>
           <ul className="right-links">
             <li>
