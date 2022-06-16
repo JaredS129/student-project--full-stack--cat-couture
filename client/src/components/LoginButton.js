@@ -9,6 +9,7 @@ const StyledButton = styled.button`
   font-size: 1.05rem;
   font-family: "Poppins";
   padding: 0.5rem 1rem;
+  white-space: nowrap;
 `;
 
 const LoginButton = () => {
@@ -24,13 +25,17 @@ const LoginButton = () => {
 
   if (isAuthenticated) {
     return (
-      <StyledButton onClick={() => logout({ returnTo: window.location.origin })}>
+      <StyledButton
+        onClick={() => logout({ returnTo: window.location.origin })}
+      >
         Log Out
       </StyledButton>
     );
   }
 
-  return <StyledButton onClick={() => loginWithRedirect()}>Log In</StyledButton>;
+  return (
+    <StyledButton onClick={() => loginWithRedirect()}>Log In</StyledButton>
+  );
 };
 
 export default LoginButton;

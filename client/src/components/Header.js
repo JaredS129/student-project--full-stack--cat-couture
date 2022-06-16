@@ -23,7 +23,10 @@ const StyledNav = styled.nav`
   }
 
   .right-links {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    justify-items: center;
 
     li {
       list-style-type: none;
