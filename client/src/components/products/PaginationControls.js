@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 
 const StyledPaginationContainer = styled.div`
   display: flex;
@@ -18,6 +15,20 @@ const StyledPaginationControls = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .page-button {
+    background: none;
+    border: none;
+  }
+  .prev {
+    transform: rotate(180deg);
+    transform-origin: center;
+    color: #f81f56;
+    font-size: 1rem;
+  }
+  .next {
+    color: #f81f56;
+    font-size: 1rem;
+  }
 `;
 
 const PaginationControls = ({ onPrev, onNext, page, totalPages }) => {
@@ -26,11 +37,12 @@ const PaginationControls = ({ onPrev, onNext, page, totalPages }) => {
       <StyledPaginationControls>
         <div>
           <button
+            className="page-button"
             disabled={page > 1 ? false : true}
             aria-label="Previous page"
             onClick={onPrev}
           >
-            <FontAwesomeIcon icon={faChevronLeft} size="2x" />
+            <FontAwesomeIcon className="prev" icon={faPlay} size="2x" />
           </button>
         </div>
         <span>
@@ -38,11 +50,12 @@ const PaginationControls = ({ onPrev, onNext, page, totalPages }) => {
         </span>
         <div>
           <button
+            className="page-button"
             disabled={page < totalPages ? false : true}
             aria-label="Next page"
             onClick={onNext}
           >
-            <FontAwesomeIcon icon={faChevronRight} size="2x" />
+            <FontAwesomeIcon className="next" icon={faPlay} size="2x" />
           </button>
         </div>
       </StyledPaginationControls>

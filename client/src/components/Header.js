@@ -4,7 +4,7 @@ import LoginButton from "./LoginButton";
 
 const StyledNav = styled.nav`
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #1e0f2f;
   display: flex;
   justify-content: space-between;
 
@@ -32,14 +32,15 @@ const StyledLink = styled(NavLink)`
     padding-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    text-decoration: none;
   }
-  color: black;
+  color: #fefcfe;
 
   &.active {
-    color: #0ea68c;
+    color: #f81f56;
   }
   &.visited {
-    color: black;
+    color: #fefcfe;
   }
 `;
 

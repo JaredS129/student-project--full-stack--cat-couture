@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const StyledFooter = styled.footer`
   width: 100%;
   align-self: flex-end;
-  background-color: #eeeeee;
+  background-color: #36125e;
   display: flex;
 
   .footer-item {
@@ -14,7 +14,7 @@ const StyledFooter = styled.footer`
     padding-right: 0.5rem;
     margin: 0;
 
-    color: black;
+    color: #fefcfe;
 
     &.visited {
       color: black;

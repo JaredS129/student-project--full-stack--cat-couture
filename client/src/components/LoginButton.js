@@ -1,26 +1,36 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import Loader from "./Loader";
+import styled from "styled-components";
+
+const StyledButton = styled.button`
+  background: none;
+  border: 2px solid #f81f56;
+  color: #fefcfe;
+  font-size: 1.05rem;
+  font-family: "Poppins";
+  padding: 0.5rem 1rem;
+`;
 
 const LoginButton = () => {
   const { loginWithRedirect, logout, isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
     return (
-      <button>
+      <StyledButton>
         <Loader />
-      </button>
+      </StyledButton>
     );
   }
 
   if (isAuthenticated) {
     return (
-      <button onClick={() => logout({ returnTo: window.location.origin })}>
+      <StyledButton onClick={() => logout({ returnTo: window.location.origin })}>
         Log Out
-      </button>
+      </StyledButton>
     );
   }
 
-  return <button onClick={() => loginWithRedirect()}>Log In</button>;
+  return <StyledButton onClick={() => loginWithRedirect()}>Log In</StyledButton>;
 };
 
 export default LoginButton;
