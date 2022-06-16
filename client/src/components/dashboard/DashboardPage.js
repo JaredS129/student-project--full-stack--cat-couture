@@ -12,7 +12,6 @@ const DashboardPage = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const [categoryReports, setCategoryReport] = useState([]);
   const [discountReports, setDiscountReport] = useState([]);
-  const [product, setProduct] = useState("");
 
   const { getAccessTokenSilently } = useAuth0();
 
@@ -53,7 +52,7 @@ const DashboardPage = () => {
     fetchData();
 
     return () => abortController.abort();
-  }, []);
+  }, [getAccessTokenSilently]);
 
   return (
     <main className="narrow-layout main-content section-padding page-padding">

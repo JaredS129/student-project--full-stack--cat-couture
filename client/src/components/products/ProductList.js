@@ -12,6 +12,7 @@ const ProductList = ({ products, className }) => {
           imageDescription={product.imageDescription}
           discountValue={product.discountValue}
           discountType={product.discountType}
+          key={product.id}
         />
       ))}
     </ul>
