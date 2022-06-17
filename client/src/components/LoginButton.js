@@ -10,6 +10,11 @@ const StyledButton = styled.button`
   font-family: "Poppins";
   padding: 0.5rem 1rem;
   white-space: nowrap;
+  &:hover {
+    background-color: #f81f56;
+    transition: 100ms;
+    cursor: pointer;
+  }
 `;
 
 const LoginButton = () => {

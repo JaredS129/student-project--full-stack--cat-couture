@@ -23,11 +23,25 @@ const StyledPaginationControls = styled.div`
     color: #f81f56;
     font-size: 1rem;
   }
+  .prev:hover {
+    cursor: pointer;
+    color: #fefcfe;
+    transition: 100ms;
+  }
   .next {
     color: #f81f56;
     font-size: 1rem;
   }
+  .next:hover {
+    cursor: pointer;
+    color: #fefcfe;
+    transition: 100ms;
+  }
   .disabled {
+    color: #7c499a;
+  }
+  .disabled:hover {
+    cursor: default;
     color: #7c499a;
   }
 `;

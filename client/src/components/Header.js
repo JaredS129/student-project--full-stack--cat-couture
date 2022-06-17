@@ -50,6 +50,10 @@ const StyledLink = styled(NavLink)`
   &.visited {
     color: #fefcfe;
   }
+  &:hover {
+    color: #f81f56;
+    transition: 100ms;
+  }
 `;
 
 const StyledHeader = styled.header`
