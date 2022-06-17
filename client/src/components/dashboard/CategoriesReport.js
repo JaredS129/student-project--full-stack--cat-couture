@@ -1,9 +1,6 @@
 import Table from "./Table";
 import TableCell from "./TableCell";
 import TableHeaderCell from "./TableHeaderCell";
-import styled from "styled-components";
-
-const StyledReport = styled.div``;
 
 const CategoriesReport = ({ reportData, className }) => {
   return (
