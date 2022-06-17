@@ -56,11 +56,12 @@ const StyledHeader = styled.header`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 1rem;
+  height: 7rem;
 
-  .logo {
-    font-size: 3rem;
+  .logo-text {
+    font-size: 2.5rem;
     margin: 2rem 0rem;
+    padding: 0;
   }
 `;
 
@@ -89,8 +90,8 @@ const Header = () => {
           </ul>
         </StyledNav>
       </header>
-      <StyledHeader className="main-layout section-padding">
-        <h1 className="logo">Cat Couture</h1>
+      <StyledHeader className="main-layout">
+        <h1 className="logo-text">Cat Couture</h1>
       </StyledHeader>
     </>
   );

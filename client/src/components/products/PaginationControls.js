@@ -10,8 +10,6 @@ const StyledPaginationContainer = styled.div`
 const StyledPaginationControls = styled.div`
   width: 100%;
   max-width: 200px;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,6 +27,9 @@ const StyledPaginationControls = styled.div`
     color: #f81f56;
     font-size: 1rem;
   }
+  .disabled {
+    color: #7c499a;
+  }
 `;
 
 const PaginationControls = ({ onPrev, onNext, page, totalPages }) => {
@@ -42,7 +43,11 @@ const PaginationControls = ({ onPrev, onNext, page, totalPages }) => {
             aria-label="Previous page"
             onClick={onPrev}
           >
-            <FontAwesomeIcon className="prev" icon={faPlay} size="2x" />
+            <FontAwesomeIcon
+              className={page > 1 ? "prev" : "prev disabled"}
+              icon={faPlay}
+              size="2x"
+            />
           </button>
         </div>
         <span>
@@ -55,7 +60,11 @@ const PaginationControls = ({ onPrev, onNext, page, totalPages }) => {
             aria-label="Next page"
             onClick={onNext}
           >
-            <FontAwesomeIcon className="next" icon={faPlay} size="2x" />
+            <FontAwesomeIcon
+              className={page < totalPages ? "next" : "next disabled"}
+              icon={faPlay}
+              size="2x"
+            />
           </button>
         </div>
       </StyledPaginationControls>

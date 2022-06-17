@@ -36,11 +36,13 @@ const StyledProduct = styled.li`
 `;
 
 const StyledDiscountBadge = styled(DiscountBadge)`
-  text-align: right;
   position: relative;
-  width: fit-content;
+  text-align: end;
+  width: 7.5rem;
   top: -4.3rem;
-  right: -12.8rem;
+  right: -12rem;
+  margin-right: 0;
+  margin-top: 0;
   margin-bottom: -3.7rem;
 `;
 

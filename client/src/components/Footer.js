@@ -9,6 +9,7 @@ const StyledFooter = styled.footer`
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 1rem;
   height: 6rem;
+  margin-top: 3rem;
 
   .links-container {
     display: grid;

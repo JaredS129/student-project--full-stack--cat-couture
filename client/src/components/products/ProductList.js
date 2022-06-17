@@ -5,6 +5,8 @@ const StyledUl = styled.ul`
   display: grid;
   grid-template-columns: 1fr;
   margin: 3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
   padding: 0;
   justify-items: center;
 `;
