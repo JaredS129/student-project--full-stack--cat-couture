@@ -14,8 +14,11 @@ beforeEach(() => {
 
 describe("Header", () => {
   test("The header renders", () => {
-    expect(screen.getByText(/products/i)).toBeInTheDocument();
+    const headingText = screen.getAllByText(/cat couture/i);
+    headingText.forEach((heading) => {
+      expect(heading).toBeInTheDocument();
+    });
     expect(screen.getByText(/dashboard/i)).toBeInTheDocument();
-    expect(screen.getByText(/cat couture/i)).toBeInTheDocument();
+    expect(screen.getByText(/products/i)).toBeInTheDocument();
   });
 });
