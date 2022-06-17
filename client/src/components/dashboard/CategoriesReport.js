@@ -4,7 +4,7 @@ import TableHeaderCell from "./TableHeaderCell";
 
 const CategoriesReport = ({ reportData, className }) => {
   return (
-    <StyledReport className={className}>
+    <div className={className}>
       <h3>Categories Report</h3>
       <Table>
         <thead>
@@ -30,7 +30,7 @@ const CategoriesReport = ({ reportData, className }) => {
           ))}
         </tbody>
       </Table>
-    </StyledReport>
+    </div>
   );
 };
 
