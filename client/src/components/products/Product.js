@@ -4,7 +4,8 @@ import DiscountBadge from "./DiscountBadge";
 const StyledProduct = styled.li`
   position: relative;
   background-color: #36125e;
-  border: 1px solid #ffbf39;
+  border: ${(props) =>
+    props.discount ? "1px solid #ffbf39" : "1px solid #f81f56"};
   list-style: none;
   padding: 1.7rem;
   margin-bottom: 1.7rem;
@@ -23,12 +24,24 @@ const StyledProduct = styled.li`
     margin: 0;
     margin-bottom: 1.3rem;
   }
+  .discount-border {
+    border: 9px solid #ffbf39;
+  }
+  .card {
+    border: 1px solid #f81f56;
+  }
+  .card-discount {
+    border: 1px solid #ffbf39;
+  }
 `;
 
 const StyledDiscountBadge = styled(DiscountBadge)`
-  position: absolute;
-  top: 0;
-  left: 0;
+  text-align: right;
+  position: relative;
+  width: fit-content;
+  top: -4.3rem;
+  right: -12.8rem;
+  margin-bottom: -3.7rem;
 `;
 
 const StyledButton = styled.button`
@@ -55,14 +68,18 @@ const Product = ({
   discountValue,
 }) => {
   return (
-    <StyledProduct>
-      <div className="card">
+    <StyledProduct discount={discountValue && discountType ? true : false}>
+      <div>
         <div>
           {imageName ? (
             <img
               src={`./img/${imageName}`}
               alt={imageDescription}
-              className="product-image"
+              className={
+                discountValue && discountType
+                  ? "product-image discount-border"
+                  : "product-image"
+              }
             />
           ) : (
             <img

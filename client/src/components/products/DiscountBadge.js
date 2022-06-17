@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 const StyledDiscountDiv = styled.div`
-  padding: 0.5rem;
+  padding: 1rem 1.2rem;
+  background-color: #ffbf39;
+  color: #1e0f2f;
+  font-weight: 700;
+  font-size: 1.3rem;
 `;
 
 const DiscountBadge = ({ discountType, discountValue, className }) => {
