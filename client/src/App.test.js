@@ -11,7 +11,10 @@ describe("App", () => {
         <App />
       </Router>
     );
-    expect(screen.getByText(/cat couture/i)).toBeInTheDocument();
+    const headingText = screen.getAllByText(/cat couture/i);
+    headingText.forEach((heading) => {
+      expect(heading).toBeInTheDocument();
+    });
     expect(screen.getByText(/products/i)).toBeInTheDocument();
     expect(screen.getByText(/dashboard/i)).toBeInTheDocument();
   });
