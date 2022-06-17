@@ -17,9 +17,6 @@ const GlobalStyle = createGlobalStyle`
 .main-layout > * {  
   max-width:1344px;
 }
-.narrow-layout > * {
-  max-width:627px;
-}
 .main-layout > *, .narrow-layout > * {   
   margin-left:auto;
   margin-right:auto;

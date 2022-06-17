@@ -20,6 +20,7 @@ const StyledFooter = styled.footer`
   .copyright {
     align-self: center;
     margin-left: -8.2rem;
+    white-space: nowrap;
   }
 
   .footer-item {
@@ -32,6 +33,16 @@ const StyledFooter = styled.footer`
 
     &.visited {
       color: black;
+    }
+  }
+  @media only screen and (max-width: 40rem) {
+    .copyright {
+      margin-left: 0;
+    }
+  }
+  @media only screen and (max-width: 26rem) {
+    .footer-item {
+      font-size: 0.7rem;
     }
   }
 `;
