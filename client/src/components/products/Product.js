@@ -8,8 +8,20 @@ const StyledProduct = styled.li`
   list-style: none;
   padding: 1.7rem;
   margin-bottom: 1.7rem;
+  width: 100%;
+  justify-self: center;
+  max-width: 30rem;
   .price {
     font-size: 1.3rem;
+    margin: 0;
+    margin-bottom: 0.8rem;
+  }
+  .product-image {
+    max-width: 20rem;
+  }
+  .description {
+    margin: 0;
+    margin-bottom: 1.3rem;
   }
 `;
 
@@ -30,6 +42,7 @@ const StyledButton = styled.button`
 const StyledHeading = styled.h3`
   color: #f81f56;
   font-size: 1.6rem;
+  margin: 0;
 `;
 
 const Product = ({
@@ -67,7 +80,9 @@ const Product = ({
         </div>
         <StyledHeading>{name}</StyledHeading>
         <p className="price">Price {price}</p>
-        <p data-testid="product-description">{description}</p>
+        <p data-testid="product-description" className="description">
+          {description}
+        </p>
         <StyledButton>Add to Cart</StyledButton>
       </div>
     </StyledProduct>
