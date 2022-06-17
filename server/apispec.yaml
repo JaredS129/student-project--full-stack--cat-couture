@@ -160,23 +160,20 @@ components:
       items:
         type: object
         properties:
-          categoryReport:
-            type: object
-            properties:
-              categoryName:
-                type: string
-              totalProducts:
-                type: integer
-                minimum: 0
-                example: 5
-              discountedProducts:
-                type: integer
-                minimum: 0
-                example: 2
-            required:
-              - categoryName
-              - discountedProducts
-              - totalProducts
+          categoryName:
+            type: string
+          totalProducts:
+            type: integer
+            minimum: 0
+            example: 5
+          discountedProducts:
+            type: integer
+            minimum: 0
+            example: 2
+        required:
+          - categoryName
+          - discountedProducts
+          - totalProducts
     discountReport:
       type: array
       items:
