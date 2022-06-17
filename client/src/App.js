@@ -10,6 +10,9 @@ import Footer from "./components/Footer";
 const StyledApp = styled.div`
   display: flex;
   height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #fefcfe;
   flex-direction: column;
   & > * {
     flex-shrink: 0;

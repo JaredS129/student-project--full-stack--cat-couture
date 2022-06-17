@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 const StyledTable = styled.div`
   width: auto;
-  overflow: scroll;
+  overflow: auto;
   & > table {
-    color: #333333;
-    background: #ffffff;
-    border: 1px solid grey;
+    color: #fefcfe;
+    background: #36125e;
+    border: 1px solid #f81f56;
     border-collapse: collapse;
     width: 100%;
   }

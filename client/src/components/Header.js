@@ -4,7 +4,7 @@ import LoginButton from "./LoginButton";
 
 const StyledNav = styled.nav`
   width: 100%;
-  background-color: #eeeeee;
+  background-color: #1e0f2f;
   display: flex;
   justify-content: space-between;
 
@@ -15,10 +15,18 @@ const StyledNav = styled.nav`
 
   .menu {
     display: flex;
+    height: 7rem;
+  }
+
+  .logo {
+    margin: 1.2rem;
   }
 
   .right-links {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    align-items: center;
+    justify-items: center;
 
     li {
       list-style-type: none;
@@ -32,14 +40,19 @@ const StyledLink = styled(NavLink)`
     padding-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    text-decoration: none;
   }
-  color: black;
+  color: #fefcfe;
 
   &.active {
-    color: #0ea68c;
+    color: #f81f56;
   }
   &.visited {
-    color: black;
+    color: #fefcfe;
+  }
+  &:hover {
+    color: #f81f56;
+    transition: 100ms;
   }
 `;
 
@@ -47,11 +60,12 @@ const StyledHeader = styled.header`
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 1rem;
+  height: 7rem;
 
-  .logo {
-    font-size: 3rem;
+  .logo-text {
+    font-size: 2.5rem;
     margin: 2rem 0rem;
+    padding: 0;
   }
 `;
 
@@ -61,7 +75,7 @@ const Header = () => {
       <header>
         <StyledNav className="page-padding">
           <div className="menu">
-            <img src="./img/menu_black_24dp.svg" alt="menu" />
+            <img className="logo" src="./img/CCLogo.jpg" alt="menu" />
           </div>
           <ul className="right-links">
             <li>
@@ -80,8 +94,8 @@ const Header = () => {
           </ul>
         </StyledNav>
       </header>
-      <StyledHeader className="main-layout section-padding">
-        <h1 className="logo">Cat Couture</h1>
+      <StyledHeader className="main-layout">
+        <h1 className="logo-text">Cat Couture</h1>
       </StyledHeader>
     </>
   );
