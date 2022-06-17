@@ -39,7 +39,7 @@ const StyledDiscountBadge = styled(DiscountBadge)`
   position: relative;
   text-align: end;
   width: 7.5rem;
-  top: -4.3rem;
+  top: -4.5rem;
   right: -12rem;
   margin-right: 0;
   margin-top: 0;
