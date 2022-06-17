@@ -60,7 +60,7 @@ const ProductPage = () => {
   };
 
   return (
-    <main className="main-layout">
+    <main>
       <PaginationControls
         onPrev={onPrev}
         onNext={onNext}

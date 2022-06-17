@@ -11,6 +11,30 @@ const StyledMain = styled.main`
   .dash-title {
     margin: 0;
   }
+  .chart-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .dash-container {
+    margin: 0 15rem;
+    justify-items: center;
+  }
+  @media only screen and (min-width: 95rem) {
+    .chart-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 7rem;
+    }
+    .dash-container {
+      margin: 0 15rem;
+    }
+  }
+
+  @media only screen and (max-width: 53rem) {
+    .dash-container {
+      margin: 0 1rem;
+    }
+  }
 `;
 
 const DashboardPage = () => {
@@ -62,23 +86,25 @@ const DashboardPage = () => {
   }, [getAccessTokenSilently]);
 
   return (
-    <StyledMain className="narrow-layout main-content section-padding page-padding">
-      <div>
+    <StyledMain className="main-content section-padding page-padding">
+      <div className="dash-container">
         <h2 className="dash-title">Dashboard</h2>
-        {loading && <Loader />}
-        {error && <ErrorMessage message={errorMessage} />}
-        {categoryReports.length > 0 && (
-          <CategoriesReport
-            reportData={categoryReports}
-            className="half-width section-padding"
-          />
-        )}
-        {discountReports.length > 0 && (
-          <DiscountsReport
-            reportData={discountReports}
-            className="half-width section-padding"
-          />
-        )}
+        <div className="chart-container">
+          {loading && <Loader />}
+          {error && <ErrorMessage message={errorMessage} />}
+          {categoryReports.length > 0 && (
+            <CategoriesReport
+              reportData={categoryReports}
+              className="half-width section-padding"
+            />
+          )}
+          {discountReports.length > 0 && (
+            <DiscountsReport
+              reportData={discountReports}
+              className="half-width section-padding"
+            />
+          )}
+        </div>
       </div>
     </StyledMain>
   );

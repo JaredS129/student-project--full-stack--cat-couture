@@ -32,6 +32,24 @@ const StyledNav = styled.nav`
       list-style-type: none;
     }
   }
+  .logo-text {
+    display: none;
+  }
+  @media only screen and (min-width: 70rem) {
+    .logo-text {
+      display: flex;
+      font-size: 2.5rem;
+      margin: 2rem 0rem;
+      padding: 0;
+    }
+    margin-bottom: 3rem;
+  }
+  @media only screen and (max-width: 32rem) {
+    .right-links {
+      grid-template-columns: 1fr;
+      justify-items: left;
+    }
+  }
 `;
 
 const StyledLink = styled(NavLink)`
@@ -67,6 +85,14 @@ const StyledHeader = styled.header`
     margin: 2rem 0rem;
     padding: 0;
   }
+  @media only screen and (min-width: 70rem) {
+    display: none;
+  }
+  @media only screen and (max-width: 25rem) {
+    .logo-text {
+      font-size: 1.8rem;
+    }
+  }
 `;
 
 const Header = () => {
@@ -77,6 +103,7 @@ const Header = () => {
           <div className="menu">
             <img className="logo" src="./img/CCLogo.jpg" alt="menu" />
           </div>
+          <h1 className="logo-text">Cat Couture</h1>
           <ul className="right-links">
             <li>
               <StyledLink to="/" className="nav-item">

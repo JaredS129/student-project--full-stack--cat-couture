@@ -9,6 +9,12 @@ const StyledUl = styled.ul`
   margin-bottom: 0;
   padding: 0;
   justify-items: center;
+  @media only screen and (min-width: 70rem) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media only screen and (min-width: 95rem) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 `;
 
 const ProductList = ({ products, className }) => {
