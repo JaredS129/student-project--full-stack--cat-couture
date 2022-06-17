@@ -5,6 +5,13 @@ import ErrorMessage from "../ErrorMessage";
 import CategoriesReport from "./CategoriesReport";
 import DiscountsReport from "./DiscountReport";
 import { useAuth0 } from "@auth0/auth0-react";
+import styled from "styled-components";
+
+const StyledMain = styled.main`
+  .dash-title {
+    margin: 0;
+  }
+`;
 
 const DashboardPage = () => {
   const [loading, setLoading] = useState(false);
@@ -55,9 +62,9 @@ const DashboardPage = () => {
   }, [getAccessTokenSilently]);
 
   return (
-    <main className="narrow-layout main-content section-padding page-padding">
+    <StyledMain className="narrow-layout main-content section-padding page-padding">
       <div>
-        <h2>Dashboard</h2>
+        <h2 className="dash-title">Dashboard</h2>
         {loading && <Loader />}
         {error && <ErrorMessage message={errorMessage} />}
         {categoryReports.length > 0 && (
@@ -73,7 +80,7 @@ const DashboardPage = () => {
           />
         )}
       </div>
-    </main>
+    </StyledMain>
   );
 };
 
